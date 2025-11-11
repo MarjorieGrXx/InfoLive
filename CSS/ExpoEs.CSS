@@ -11,11 +11,7 @@
     margin: 0px 2px;
     padding: 0px;
 }
-/*body{
-  width: 1300px;
-   font-family: Verdana, 'Lucida Grande'; 
-   background-color: #2d492a; 
-}*/
+
 header,section, footer,article,aside,nav,figure {
     display: block;
 }
@@ -25,11 +21,7 @@ header,section, footer,article,aside,nav,figure {
 #menu a {text-decoration: none;}
 #menu {
   height: 40px;
-  font-family: comicss;
-  /*background: #4dbe53;  /* fallback for old browsers */
-  /*background: -webkit-linear-gradient(to right, #667539, #ff7606);  /* Chrome 10-25, Safari 5.1-6 */
-  /*background: linear-gradint(to right, #667539, #ff7606); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /*box-shadow: 0px 2px 3px fe7e11;*/  
+  font-family: comicss; 
   width: 100%;
   margin: 0 auto;
 }
@@ -178,7 +170,6 @@ header,section, footer,article,aside,nav,figure {
   height: auto;
   margin: 5px;
   float: left;
-  /*background-color: #000000;*/
 }
 #galeria img{
   cursor: pointer;
@@ -224,17 +215,22 @@ border-radius: 5px;
   width: 340px;
   height: auto;
   float: left;
-  margin: 20px 5px;
-  padding: 0px; 
-  /*background-color:  rgb(235, 164, 11);*/
+  padding: 0px;
+  margin: 20px 5px; 
   border-radius: 10px;
-  background-color:  #fe7e11;
+
 } 
 
-#text-box li{
- 
-  margin-left: 24px;
-
+#text-us{
+  width: 340px;
+  height: auto;
+  float: left;
+  padding: 0 0 0 30px;
+  margin: 20px 5px; 
+  border-radius: 10px;
+  border: 2px solid #fe7e11;
+  font-family: dulcee;
+  font-size: small;
 } 
 
 #article-box{
@@ -243,7 +239,6 @@ border-radius: 5px;
   float: left;
   margin: 20px 5px;
   padding: 0px; 
-  /*background-color:  rgb(235, 164, 11);*/
   border-radius: 10px;
   
 } 
@@ -253,10 +248,9 @@ h2
   font-size: 20px;
   text-align: center;
   padding: 5px;
-  font-family: cursive;
+  font-family: comicss;
   letter-spacing: 3px;
-  color: white;
-  text-shadow: rgb(0, 0, 0) 1px 1px 4px;
+  color: rgb(13, 109, 0);
 }
 
 p{
@@ -296,7 +290,6 @@ p{
   justify-content: center; /*alinea de izquierda a derecha*/
   z-index: 99; /*hace que aparesca encima de otros elementos*/
 }
-
 #equisCerrar
 {
     color: #fff;
@@ -329,9 +322,6 @@ p{
 }
 
 #tituloReceta{
- /*  width: 400px;
-  background-color:  rgb(235, 164, 11);
-  border-radius: 10px; */
   display: flex;
   justify-content: flex-start;
   width: 300PX;
@@ -368,8 +358,6 @@ p{
   height: auto;
   margin: 5px;
   float: left;
-/*   background-color: #000000; */
-
 }
 
 #imagenGrande{
@@ -385,16 +373,4 @@ display: block;
   font-family: comicss;
   color: #fff;
 }
-/*css del menu
-align-items: center
-flex-direction: row;
-margin-left: 0;
-margin-right: 0
-margin-bottom: 0;
-margin-top: 0;
-display: flex*/
-
-/*En buena teoria hace q un elemento no se mueva de la posición en la que esta
-position: sticky;
-top: 20px;*/
 
