@@ -143,6 +143,24 @@ header,section, footer,article,aside,nav,figure {
   color: #ffffff;
 }
 
+.languajes{
+  display: flex;
+  gap: .5rem;
+}
+
+.lang-button{
+  background-color: orange;
+  border: 0;
+  color: white;
+  padding: 5px 10px;
+  /*text-align: center;
+  text-decoration: none;
+  display: inline-block;*/
+  font-size: 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .cabecera{
   width: 100%;
   height: auto;

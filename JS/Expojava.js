@@ -1,13 +1,15 @@
 const grande = document.getElementById("grande")
 const photo = document.getElementById ("picture") 
+
+/*Para el cambio de idioma*/
+const langButtons = document.querySelectorAll("[data-section]");
+const textsToChanqe = document.querySelectorAll("[data-key]");
+console.long(textsToChanqe);
+/***************************/
+
 let tituloReceta = document.getElementById("tituloReceta")
 let textoReceta = document.getElementById("texto-receta")
-/* let detalles = document.getElementById("detalles-receta") */
 
-//Esto es de los articulos
-/* let tituloArticulo = document.getElementById("tituloArticulo")
-let textoArticulo = document.getElementById("texto-articulo") */
-//
 let imagenes = [...document.querySelectorAll(".imagen")]
 let ID = parseInt(photo.dataset.id)
 let bReceta = document.getElementById("miBoton")
@@ -40,42 +42,28 @@ fetch("../recetas.json")                       /*Buscamos el archivo json con el
             console.log("Receta encontrada:", prueba);
             tituloReceta.innerHTML = receta.Nombre;
             textoReceta.innerHTML = "Detalles:<br>" + receta.Ingredientes.join("<br>");
-            /* detalles.innerHTML = "Detalles:<br>" + receta.Detalles.join("<br>"); */
-            
-            //textoReceta = recetas[posicion]["Ingredientes"]
-            /*let receta = recetas[posicion];
-            let nombre = receta["Nombre"];
-            let ingredientes = receta["Ingredientes"]
-              .map(ingrediente => `<li>${ingrediente}</li>`)
-              .join("");
-
-            textoReceta.innerHTML = `<h2>${nombre}</h2><strong>Ingredientes:</strong><ul>${ingredientes}</ul>`;
-            */
-            //console.log(recetas[posicion]["Nombre"])
             console.log(tituloReceta)
             console.log(textoReceta)
             console.log(posicion)
         })
-
     })
 });
-/* 
-bReceta.addEventListener("click", () => 
-{
-    window.location.href = receta.Link;
-})
- */
 
+langButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        fetch(`../languages/${button.dataset.section}.json`)
+        .then(res => res.json())
+        .then(data => {
+            textsToChanqe.forEach((el) => {
+                const section = el.dataset.section;
+                const value = el.dataset.value;
 
-//console.log(recetas[0]["Clasificaciones"]) 
+                el.innerHTML = data[section][value];
+            })
+        })
+    })
+});
 
-/*fetch("./recetas.json")
-    .then((response) => response.json())
-    .then((data) => {
-        recetas = data
-        console.log(recetas)
-        mostrarReceta()
-    })*/
 
 /*El fetch es una funcion que sirve para pedir datos a un archivo o servidor web
 Si yo tengo mi archivo recetas.json, el fetch lo va a buscar y me devuelve su contenido 
@@ -83,4 +71,6 @@ El fetch(recetas.json) devuelve una promesa, q es un objeto especial que represe
 En este caso, nuestra promesa se cumple cuando el fetch va a buscar el archivo recetas.json y nos devuelve su contenido.
 El then se emplea para encadenar acciones que se van a realizar después de que se cumpla la promesa, si no se cumple la promesa no se ejecutan
 La promesa es la que va entre ("")*/
+
+
 

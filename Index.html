@@ -13,60 +13,40 @@
         </style> -->
     </head>
     <body>
-         <div id="agrupar"> 
+        <div id="agrupar"> 
             <header id="cabecera" class="cabecera">
                 <img src="res/Logotexto.jpg" id="imagenGrande" >
             </header> 
             </div>
-         <nav id='menu'>
-                <ul>
-                       <li><a href='./Index.html'>Inicio</a></li>
-                       
-                       <li><a href='./Opcion1/RecetasDGe.html'>Recetas dulces</a>
+        <nav id='menu'>
+            <ul>
+                <li><a href='./Index.html' data-section="menu" data-value="Op1">Inicio</a></li>
+                
+                <li><a href='./Opcion1/RecetasDGe.html' data-section="menu" data-value="Op2">Recetas dulces</a>
+                   <ul>
+                      <li><a href='./Opcion1/GluteeFD.html' data-section="SubOp2" data-value="Op2.1">Gluten Free</a></li>
+                      <li><a href='./Opcion1/SugarfreeD.html' data-section="SubOp2" data-value="Op2.2">Sugar Free</a></li>
+                      <li><a href='./Opcion1/VeganasD.html' data-section="SubOp2" data-value="Op2.3">Veganas</a></li>
+                      <li><a href='./Opcion1/VegetarianasD.html' data-section="SubOp2" data-value="Op2.4">Vegetarianas</a></li>
+                   </ul>
+                </li>
+                
+                <li><a href='./Opcion2/RecetasSGe.html' data-section="menu" data-value="Op3">Recetas saladas</a>
+                 <ul>
+                    <li><a href='./Opcion2/GlutenFS.html' data-section="SubOp3" data-value="Op3.1">Gluten Free</a></li>
+                    <li><a href='./Opcion2/VeganasS.html' data-section="SubOp3" data-value="Op3.2">Veganas</a></li>
+                    <li><a href='./Opcion2/VegetarianasS.html' data-section="SubOp3" data-value="Op3.3">Vegetarianas</a></li>
+                  </ul>
+                </li>
+                <li><a href='./Opcion3/ArticulosNutr.html' data-section="menu" data-value="Op4">Articulos nutricionales</a></li>
+                <li><a href='./Opcion4/AcercaDnos.html' data-section="menu" data-value="Op5">Acerca de Nosotros</a></li>
+            </ul>
+            <div class="lenguages">
+                <button class="lang-button" data-lenguage="es">ES</button>
+                <button class="lang-button" data-lenguage="en">EN</button>
+            </div>
+        </nav>
 
-                          <ul>
-                             <li><a href='./Opcion1/GluteeFD.html'>Gluten Free</a>
-
-                             <li><a href='./Opcion1/SugarfreeD.html'>Sugar Free</a>
-                               
-                             <li><a href='./Opcion1/VeganasD.html'>Veganas</a>
-
-                             <li><a href='./Opcion1/VegetarianasD.html'>Vegetarianas</a>
-
-
-                             </li>
-                          </ul>
-                       </li>
-                       
-                       <li><a href='./Opcion2/RecetasSGe.html'>Recetas saladas</a>
-
-                        <ul>
-                           <li><a href='./Opcion2/GlutenFS.html'>Gluten Free</a>
-                             
-                           <li><a href='./Opcion2/VeganasS.html'>Veganas</a>
-
-                           <li><a href='./Opcion2/VegetarianasS.html'>Vegetarianas</a>
-
-                           </li>
-                         </ul>
-                       </li>
-
-                     <li><a href='./Opcion3/ArticulosNutr.html'>Articulos nutricionales</a></li>
-
-                     <li><a href='./Opcion4/AcercaDnos.html'>Acerca de Nosotros</a></li>
-                </ul>
-            </nav>
-        
-        <div id="agrupar"> 
-            <!-- <header id="cabecera" class="cabecera"> -->
-                <!-- <h1><p>Aquí va el encabezado promocional </p></h1> -->
-<!--                  <img src="res/Logo,fondo.jpg" id="imagenGrande" >
-            </header> --> 
-        
-            <!-- <aside id="columna" class="columna"> -->
-                <!-- <blockquote><h1><p>columa</p></h1></blockquote> -->
-            <!-- </aside> -->
-        </div>
              <!-- Codigo que se ejecuta al hacer click en alguna de las imagenes, lo cual va a mostrar la receta en grande. -->
         <div id="grande" class="grande">
             <span id="equisCerrar">X</span>          
@@ -75,16 +55,8 @@
                                                                                                            
                 <img src="res/1.jpg" id="picture" data-id="vacio" >
                 
-            <p id="texto-receta">
-                Ingredientes:
-            </p >
-          <!--   <p id="detalles-receta">
-                Detalles:
-            </p > -->
+            <p id="texto-receta">Ingredientes:</p >
 
-           <!--   <button class="bReceta">Receta Completa</button> -->
-            <!-- <div id="contenedorReceta" class="contenedor">    
-            </div> -->
         </div>
         <section id="fotos">
             <article id="galeria"> 
@@ -125,7 +97,6 @@
                 <figure>
                     <img src="res/13.png" class="imagen" id="text-box" data-id="13">
                 </figure>
-
             </article>
 
             <article id="galeria"> 
@@ -147,19 +118,11 @@
                     <img src="res/25.png" class="imagen" id="text-box" data-id="25" >
                 </figure>
             </article>
-
-            <article id="galeria"> 
-                
-
-                
-                
-        
-            </article>
         </section>
      
       
         <footer id="pie">
-           Derechos reservados &copy;2024.
+           Derechos reservados &copy;2025.
         </footer>  
 
         <script src="/JS/Expojava.js"></script>

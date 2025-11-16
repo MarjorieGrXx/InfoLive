@@ -1,0 +1,24 @@
+{
+    "menu": {
+        "Op1": "Inicio",
+        "Op2": "Sweet Recipes",
+        "Op3": "Salad Recipes",
+        "Op4": "Articulos nutricionales",
+        "Op5": "About us"
+    },
+    "SubOp2": {
+        "Op2.1": "Gluten Free",
+        "Op2.2": "Sugar Free",
+        "Op2.3": "Veganas",
+        "Op2.4": "Vegetariana"
+    },
+    "SubOp3": {
+        "Op3.1": "Gluten Free",
+        "Op3.2": "Veganas",
+        "Op3.3": "Vegetarianas"
+    },
+
+    "footer": {
+        "derechos": "derechos reservados &copy;2025."
+    }
+}
