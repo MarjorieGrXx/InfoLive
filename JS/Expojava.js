@@ -44,7 +44,7 @@ langButtons.forEach((button) => {
 let recetas = [];
 if (!hizoClick) {
 
-    fetch("../recetas.json")
+    fetch("../esRecetas.json")
         .then(respuesta => respuesta.json())
         .then(data => {
             recetas = data;

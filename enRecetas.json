@@ -13,15 +13,7 @@
       "Pimienta negra.",
       "Queso rallado tipo cheddar o similar.",
       "Aceite de oliva extra virgen."
-    ],
-    "Detalles": [
-      "Gluten Free",
-      "Baja en grasas",
-      "215 kcal por porción",
-      "4 porciones",
-      "18g de proteína por porción"
-    ],
-    "Link": "https://www.abc.es/recetasderechupete/rollitos-de-calabacin-rellenos-de-verduras-y-queso/73428/"
+    ]
   },
 
   { "ID": 2,
@@ -36,14 +28,7 @@
       "1 pepino.",
       "Un pellizco de sal (esto al gusto) y agua como ingrediente opcional",
       "Para la guarnición: 1 cebolla pequeña, 1 tomate, 50 g de pimiento verde y 50 g de pepino. (todo en pequeños dados)"
-    ],
-    "Detalles": [
-      "Vegana",
-      "Vegetariana",
-      "65 kcal por porción",
-      "6 porciones"
-    ],
-    "Link": "https://www.abc.es/recetasderechupete/gazpacho-andaluz-una-receta-con-la-alegria-de-la-huerta-el-tomate/5701/"
+    ]
   },
 
    {"ID": 3,
@@ -64,15 +49,7 @@
       "Pimienta",
       "Romero o tomillo seco",
       "Aceite de oliva virgen extra"
-    ],
-    "Detalles": [
-      "Gluten Free",
-      "Vegetariana",
-      "350 kcal por porción",
-      "4 porciones",
-      "12g de proteína por porción"
-    ],
-    "Link": "https://www.abc.es/recetasderechupete/ragu-de-berenjena-con-polenta/138040/"
+    ]
   },
   
   { "ID": 4,
@@ -94,15 +71,7 @@
       "3 cucharadas de arroz jazmín de Tilda o arroz glutinoso (para tostar)",
       "Sal al gusto",
       "Hojas de lechuga, col o endivias para servir"
-    ],
-    "Detalles": [
-      "Gluten Free",
-      "Baja en grasas",
-      "310 kcal por porción",
-      "4 porciones",
-      "350 kcal por porción"
-    ],
-    "Link": "https://www.abc.es/recetasderechupete/ensalada-de-pollo-estilo-thai-laab-kai/136782/"
+    ]
   },
   { "ID": 5,
     "posicion": 5,
