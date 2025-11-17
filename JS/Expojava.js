@@ -4,20 +4,8 @@ const photo = document.getElementById ("picture")
 /*Para el cambio de idioma*/
 const langButtons = document.querySelectorAll("[data-language]");
 const textsToChange = document.querySelectorAll("[data-section]");
-console.log(textsToChange);
+
 /***************************/
-
-let tituloReceta = document.getElementById("tituloReceta")
-let textoReceta = document.getElementById("texto-receta")
-
-let imagenes = [...document.querySelectorAll(".imagen")]
-let ID = parseInt(photo.dataset.id)
-let bReceta = document.getElementById("miBoton")
-
-const equisCerrar = document.getElementById("equisCerrar")
-equisCerrar.addEventListener("click", (e) => {
-    grande.style.display = "none"
-})
 
 /******Para el cambio de idioma*******/
 
@@ -67,6 +55,20 @@ if (!hizoClick) {
     });
 
 }
+
+let tituloReceta = document.getElementById("tituloReceta")
+let textoReceta = document.getElementById("texto-receta")
+
+let imagenes = [...document.querySelectorAll(".imagen")]
+let ID = parseInt(photo.dataset.id)
+let bReceta = document.getElementById("miBoton")
+
+const equisCerrar = document.getElementById("equisCerrar")
+equisCerrar.addEventListener("click", (e) => {
+    grande.style.display = "none"
+})
+
+
 
 function iniciarEventosDeImagenes() {
     let posicion = 0;

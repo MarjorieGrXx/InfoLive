@@ -17,6 +17,9 @@
         "Op3.2": "Veganas",
         "Op3.3": "Vegetarianas"
     },
+    "titulo": {
+        "RecDulGF": "Recetas dulces gluten free"
+    },
 
     "footer": {
         "derechos": "derechos reservados &copy;2025."
