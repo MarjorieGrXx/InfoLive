@@ -4,7 +4,7 @@ const photo = document.getElementById ("picture")
 /*Para el cambio de idioma*/
 const langButtons = document.querySelectorAll("[data-language]");
 const textsToChange = document.querySelectorAll("[data-section]");
-console.log(textsToChange);
+
 /***************************/
 
 /******Para el cambio de idioma*******/
