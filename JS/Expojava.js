@@ -2,9 +2,9 @@ const grande = document.getElementById("grande")
 const photo = document.getElementById ("picture") 
 
 /*Para el cambio de idioma*/
-const langButtons = document.querySelectorAll("[data-section]");
-const textsToChanqe = document.querySelectorAll("[data-key]");
-console.long(textsToChanqe);
+const langButtons = document.querySelectorAll("[data-language]");
+const textsToChange = document.querySelectorAll("[data-section]");
+console.log(textsToChange);
 /***************************/
 
 let tituloReceta = document.getElementById("tituloReceta")
@@ -19,14 +19,34 @@ equisCerrar.addEventListener("click", (e) => {
     grande.style.display = "none"
 })
 
+/******Para el cambio de idioma*******/
+
+langButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        fetch(`../${button.dataset.language}.json`)
+        .then(res => res.json())
+        .then(data => {
+            textsToChange.forEach((el) => {
+                const section = el.dataset.section;
+                const value = el.dataset.value;
+
+                el.innerHTML = data[section][value];
+            })
+        })
+    })
+});
+/***************************************/
+
+
 let recetas = []
-fetch("../recetas.json")                       /*Buscamos el archivo json con el fetch el cual nos devuelve el contenido del archivo, el cual no es
+fetch("../recetas.json")
+/*fetch(`../${button.dataset.language}Recetas.json`) /*Buscamos el archivo json con el fetch el cual nos devuelve el contenido del archivo, el cual no es
                                             un objeto JS, por lo que hay q convertirlo*/
   .then(respuesta => respuesta.json())      /*Convierte el contenido en objeto JS, que es como si dijera "cuando llegue la respuestas, que se 
                                             convierta a Json", pero, este devuelve una promesa*/
   .then(data => {   
     recetas = data                        /*X lo que ocupamos otro then para recibir esos datos y poder usarlos*/
-    console.log(recetas);
+    /*console.log(recetas);*/
   
     let posicion = 0
     imagenes.forEach((elemento, i) => {
@@ -37,33 +57,17 @@ fetch("../recetas.json")                       /*Buscamos el archivo json con el
 
             ID = parseInt(elemento.dataset.id);
             let receta = recetas.find(r => r.ID === ID);
-            console.log("Buscando ID:", ID);
+            /*console.log("Buscando ID:", ID);*/
             let prueba = recetas.find(r => r.ID == ID);
-            console.log("Receta encontrada:", prueba);
+            /*console.log("Receta encontrada:", prueba);*/
             tituloReceta.innerHTML = receta.Nombre;
             textoReceta.innerHTML = "Detalles:<br>" + receta.Ingredientes.join("<br>");
-            console.log(tituloReceta)
+            /*console.log(tituloReceta)
             console.log(textoReceta)
-            console.log(posicion)
+            console.log(posicion)*/
         })
     })
 });
-
-langButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        fetch(`../languages/${button.dataset.section}.json`)
-        .then(res => res.json())
-        .then(data => {
-            textsToChanqe.forEach((el) => {
-                const section = el.dataset.section;
-                const value = el.dataset.value;
-
-                el.innerHTML = data[section][value];
-            })
-        })
-    })
-});
-
 
 /*El fetch es una funcion que sirve para pedir datos a un archivo o servidor web
 Si yo tengo mi archivo recetas.json, el fetch lo va a buscar y me devuelve su contenido 
