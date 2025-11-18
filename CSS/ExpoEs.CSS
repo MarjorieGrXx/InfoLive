@@ -20,275 +20,283 @@ header,section, footer,article,aside,nav,figure {
   .escritorio{
     display: none;
   }
-  .tablet{
-    display: none;
+
+  .nav{
+    background-color: #ff6600;
+
+    --img1: scale(1);
+    --img2: scale(0);
   }
 
-  
-  .cabecera{
-  width: 100%;
-  height: auto;
-  float: left;
-  padding: 10px 0px;
-  margin: 20px 0px;
-  text-align: center;
-}
+  .nav:has( .dropdown:target ){
+      --img1: scale(0);
+      --img2: scale(1);
 
-#fotos
-{
-  width: 1300px;
-  height: auto;
-  display: flex;
-  justify-content: center;   /* Alineación horizontal */   
-}
-
-#galeria{
-  width: auto;
-  height: auto;
-  margin: 5px;
-  float: left;
-}
-
-#text-box{
-  width: 340px;
-  height: auto;
-  float: left;
-  padding: 0px;
-  margin: 20px 5px; 
-  border-radius: 10px;
-
-} 
-
-#text-us{
-  width: 340px;
-  height: auto;
-  float: left;
-  padding: 5px 25px;
-  margin: 20px 5px; 
-  text-align: center;
-  border-radius: 10px;
-  font-size: small;
-  line-height: 2;
-} 
-
-#img-us{
-  width: 400px;
-  height: auto;
-  float: left;
-  margin: 20px; 
-  border-radius: 10px;
-}
-
-#article-box{
-  width: 300px;
-  height: auto;
-  float: left;
-  margin: 20px 5px;
-  padding: 0px; 
-  border-radius: 10px;
-} 
-
-h2
-{
-  font-size: 20px;
-  text-align: center;
-  padding: 5px;
-  letter-spacing: 3px;
-}
-
-p{
-  font-size: 18px;
-  text-align: justify;
-  padding: 5px;
-}
-#articulo
-{
-  text-align: center;
-  width: 320px;
-  height: auto;
-  float: left;
-  margin: 5px;
-  padding: 0px;
-  border-radius: 10px;
-}
-
-
-/*.grande
-{
-}*/
-#equisCerrar
-{
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    font-size: 30px;  
-}
-
-
-.bReceta{
-  border-radius: 8px 10px;
-  padding: 12px;
-}
-
-.pie{
-  clear:both;
-  float: left;
-  text-align: center;
-  border-top: #fe7e11 2px solid;
-}
-
-#tituloReceta{
-  display: flex;
-  justify-content: flex-start;
-  width: 300PX;
-  height: auto;
-  padding: 10px;
-  text-align: center;
-}
-
-#picture{
-  clear: both;
-  display: block;
-  width: 400px;
-  height: auto;
-  margin: 15px;
-  padding: 5px; 
-  border-radius: 10px;
-}
-
-#texto-receta{
-  display: block;
-  padding: 30px;
-  width: 70%;
-  height: auto;
-}
-
-#spam
-{
-  justify-content: center;
-  width: 330px;
-  height: auto;
-  margin: 5px;
-  float: left;
-}
-
-#imagenGrande{
-  width: auto;
-  height: 250px;
-  margin: 0px;
-  padding: 0px;
-  border-radius: 10px;
-}
-
-#detalles-receta{
-display: block;
-}
-
-  * {
-    border: 0;
-    outline: 0;
-    list-style: none;
-    text-decoration: none;
+      --clip:inset(0 0 0 0);
   }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15%;
-    height: 75px;
-    line-height: 75px;
-    background: #154f91;
+  .nav__container{
+      width: 90%;
+      margin: 0 auto;
+      height: 70px;
+
+      display: grid;
+      grid-template-columns: max-content max-content;
+      grid-template-areas: "title img";
+      justify-content: space-between;
+      align-items: center;
+
+      overflow: hidden;
   }
 
-  nav .navbar-brand{
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 500;
-    letter-spacing: .5px;
+  .nav__title{
+      color: #fff;
+      grid-area: title;
   }
 
-  nav .nav-list{
-    display: flex;
+
+  .nav__menu{
+      grid-area: img;
+      position: relative;
+      z-index: 10;
+
+      transform: var(--img1);
   }
 
-  nav .nav-list .nav-item{
-    cursor: pointer;
-    height: 100% ;
-    padding: 0 30px;
-    transition: .4s;
+  .nav__menu--second{
+      transform: var(--img2);
   }
 
-  nav .nav-list .nav-item:hover{
-    background: #9acd32;
+  .nav__icon{
+      width: 30px;
+      display: block;
   }
 
-  nav .nav-list .nav-link{
-    color: #f1f1f1;
-    font-size: 18px;
-    font-weight: 500;
+  .dropdown{
+      position: absolute;
+      background-color: rgb(13, 109, 0);;
+      width: 75%;
+      max-width: 300px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding: 1em;
+
+      display: grid;
+      align-content:center ;
+      gap: 1rem;
+
+      overflow-y: auto;
+
+
+      clip-path: var(--clip, inset(0 0 100% 100%));
+      transition: clip-path .5s;
   }
 
-  /*Aqui va lo de cel*/
-  nav .nav-list{
-    display: grid;
-    position: absolute;
-    background: #154f91;
+  .dropdown__list{
+      list-style: none;
+  }
+
+  .dropdown__link{
+      color: rgb(255, 255, 255);
+      padding: 1em .7em;
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+
+      position: relative;
+      background-color: var(--bg, transparent);
+      border-radius: 6px;
+  }
+
+  .dropdown__list:has( :checked ){
+      --rows: 1fr;
+      --rotate: rotate(180deg);
+      --bg: #ff6600;
+  }
+
+  .dropdown__check{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+  }
+
+  .dropdown__arrow{
+      margin-left: auto;
+      transform: var(--rotate, 0);
+      transition: .2s transform;
+  }
+
+  .dropdown__content{
+      display: grid;
+      grid-template-rows: var(--rows, 0fr);
+      transition: .3s grid-template-rows;
+  }
+
+  .dropdown__sub{
+      overflow: hidden;
+
+  }
+
+  .dropdown__li{
+      width: 85%;
+      list-style: none;
+      margin-left: auto;
+  }
+
+  .dropdown__anchor{
+      padding: 1em 0;
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+  }
+
+  #fotos
+  {
     width: 100%;
-    top: 75px;
-    left: 0;
-    transform: translateY(-100%); 
-    z-index: -1;
-    transition: .6s;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  nav .nav-list .nav-item{
-    padding-left: 35px;
+  #galeria{
+    width: auto;
+    height: auto;
+    margin: 5px;
+    float: left;
   }
 
-  nav .navbar-toggler{
-    display: grid !important;
+  #text-box{
+    width: 70%;
+    height: auto;
+    float: left;
+    padding: 0px;
+    margin: 20px 15%; 
+    border-radius: 10px;
+
+  } 
+
+  #text-us{
+    width: 340px;
+    height: auto;
+    float: left;
+    padding: 5px 25px;
+    margin: 20px 5px; 
+    text-align: center;
+    border-radius: 10px;
+    font-size: small;
+    line-height: 2;
+  } 
+
+  #img-us{
+    width: 400px;
+    height: auto;
+    float: left;
+    margin: 20px; 
+    border-radius: 10px;
   }
 
-/*Esto es de las lineas*/
-  nav .navbar-toggler{
-    display: none;
-    height: min-content;
-    margin: 18px -10px 0 0;
-    cursor: pointer;
+  #article-box{
+    width: 300px;
+    height: auto;
+    float: left;
+    margin: 20px 5px;
+    padding: 0px; 
+    border-radius: 10px;
+  } 
+
+  h2
+  {
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 3px;
   }
 
-  nav .navbar-toggler .bar{
-    width: 35px;
-    height: 3px;
-    margin-bottom: 8px;
-    background: #ffffff;
-    border-radius: 15px;
-    transition: .3s;
+  p{
+    font-size: 18px;
+    text-align: justify;
+    padding: 5px;
+  }
+  #articulo
+  {
+    text-align: center;
+    width: 320px;
+    height: auto;
+    float: left;
+    margin: 5px;
+    padding: 0px;
+    border-radius: 10px;
   }
 
-  input{
-    display: none;
+
+  /*.grande
+  {
+  }*/
+  #equisCerrar
+  {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      font-size: 30px;  
   }
 
-  input:checked ~ nav .nav-list{
-    transform: translateY(0);
+
+  .pie{
+    clear:both;
+    float: left;
+    text-align: center;
+    border-top: #fe7e11 2px solid;
   }
 
-  input:checked ~ nav .navbar-toggler{
-    margin-top: 35px;
-  }
-/*Efecto de las lineas*/
-  input:checked ~ nav .navbar-toggler .bar:nth-child(1){
-    position: absolute;
-    transform: rotate(45deg);
-  }
-
-  input:checked ~ nav .navbar-toggler .bar:nth-child(2){
-    display: none
+  #tituloReceta{
+    display: flex;
+    width: 60PX;
+    height: auto;
+    margin: 10px;
+    text-align: center;
   }
 
-  input:checked ~ nav .navbar-toggler .bar:nth-child(3){
-    transform: rotate(-45deg);
+  #picture{
+    clear: both;
+    display: flex;
+    width: 150px;
+    height: auto;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  #texto-receta{
+    display: block;
+    padding: 30px;
+    width: 70%;
+    height: auto;
+  }
+
+  #spam
+  {
+    justify-content: center;
+    width: 330px;
+    height: auto;
+    margin: 5px;
+    float: left;
+  }
+
+  #imagenGrande{
+    width: auto;
+    height: 250px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+  }
+
+  #detalles-receta{
+  display: flex;
   }
 
 }
@@ -297,10 +305,6 @@ display: block;
   .escritorio{
     display: none;
   }
-  .phone{
-    display: none;
-  }
-
   
   .cabecera{
   width: 100%;
@@ -482,25 +486,25 @@ display: block;
 .tablet{
     display: none;
   }
-  .telefono{
+  .phone{
     display: none;
   }
 
-  #menu ul {list-style: none;}
-  #menu a {text-decoration: none;}
-  #menu {
+  #menu-desktop ul {list-style: none;}
+  #menu-desktop a {text-decoration: none;}
+  #menu-desktop {
     height: 40px;
     font-family: comicss; 
     width: 100%;
     margin: 0 auto;
   }
-  #menu > ul > li {
+  #menu-desktop > ul > li {
     float: left;
     margin-top: 20px;
     margin-left: 15px;
     position: relative;
   }
-  #menu > ul > li > a {
+  #menu-desktop > ul > li > a {
     color: orange;
     font-size: 20px;
     line-height: 40px;
@@ -511,8 +515,8 @@ display: block;
     -o-transition: color .15s;
     transition: color .15s;
   }
-  #menu > ul > li > a:hover {color: rgb(26, 112, 0);}
-  #menu > ul > li > ul {
+  #menu-desktop > ul > li > a:hover {color: rgb(26, 112, 0);}
+  #menu-desktop > ul > li > ul {
     opacity: 0;
     visibility: hidden;
     padding: 16px 0 20px 0;
@@ -535,12 +539,12 @@ display: block;
     -webkit-box-shadow: 0px 1px 3px rgb(255, 0, 0);
     box-shadow: 0px 1px 3px rgb(100, 68, 68);
     }
-  #menu > ul > li:hover > ul {
+  #menu-desktop > ul > li:hover > ul {
     opacity: 1;
     top: 42px;
     visibility: visible;
   }
-  #menu > ul > li > ul:before {
+  #menu-desktop > ul > li > ul:before {
     content: '';
     display: block;
     border-color: transparent transparent rgb(222, 127, 76) transparent;
@@ -551,8 +555,8 @@ display: block;
     left: 50%;
     margin-left: -10px;
   }
-  #menu > ul ul > li {position: relative;}
-  #menu ul ul a {
+  #menu-desktop > ul ul > li {position: relative;}
+  #menu-desktop ul ul a {
     color: #000000;
     font-size: 13px;
   
@@ -569,7 +573,7 @@ display: block;
     -o-transition: background-color 0.1s;
     transition: background-color 0.1s;
   }
-  #menu > ul > li > ul > li > ul:before {
+  #menu-desktop > ul > li > ul > li > ul:before {
     content: '';
     display: block;
     border-color: transparent rgb(145, 66, 66) transparent transparent;
@@ -579,7 +583,7 @@ display: block;
     top: 23%;
     left: -20px;
   }
-  #menu ul ul ul {
+  #menu-desktop ul ul ul {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -602,12 +606,12 @@ display: block;
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   }
-  #menu ul ul > li:hover > ul {
+  #menu-desktop ul ul > li:hover > ul {
     opacity: 1;
     left: 200px;
     visibility: visible;
   }
-  #menu ul ul a:hover {
+  #menu-desktop ul ul a:hover {
     background-color: rgb(128, 78, 78);
     color: #ffffff;
   }
@@ -723,12 +727,6 @@ p{
     font-size: 30px;  
 }
 
-
-.bReceta{
-  border-radius: 8px 10px;
-  padding: 12px;
-}
-
 .pie{
   clear:both;
   float: left;
@@ -813,14 +811,6 @@ display: block;
   border-top: #ff6600 5px solid;
   /*border-bottom: #ff6600 5px solid; */
   font-family: dulcee;
-}
-
-#fotos
-{
-  width: 1300px;
-  height: auto;
-  display: flex;
-  justify-content: center;   /* Alineación horizontal */   
 }
 
 #galeria{
@@ -963,16 +953,6 @@ p{
   cursor: pointer ;
 }
 
-
-.bReceta{
-  background: #134E5E;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: comicss;
-  /* border-radius: 8px 10px;
-  padding: 12px; */
-}
-
 .pie{
  /*  clear:both;
   float: left;
@@ -981,31 +961,29 @@ p{
 }
 
 #tituloReceta{
-  /* display: flex;
-  justify-content: flex-start;
-  width: 300PX;
+  display: flex;
+  /*justify-content: flex-start;*/
   height: auto;
-  padding: 10px; */
+  /*padding: 10px; */
   color: #fff;
   /* text-align: center; */
 }
 
 #picture{
-  /* clear: both;
+  /*clear: both;
   display: block;
-  width: 400px;
   height: auto;
   margin: 15px;
   padding: 5px;  */
   background-color:  #fe7e11;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
 }
 
 #texto-receta{
-  /* display: block;
+  display: block;
   padding: 30px;
   width: 70%;
-  height: auto; */
+  height: auto; 
   font-family: comicss;
   color: #fff;
 }
@@ -1028,7 +1006,7 @@ p{
 }
 
 #detalles-receta{
-/*display: block;*/
+  display: block;
   font-family: comicss;
   color: #fff;
 }
