@@ -1,6 +1,6 @@
 {
     "menu": {
-        "Op1": "Inicio",
+        "Op1": "Home",
         "Op2": "Sweet Recipes",
         "Op3": "Salad Recipes",
         "Op4": "Nutritional Articles",
@@ -17,6 +17,40 @@
         "Op3.2": "Veganas",
         "Op3.3": "Vegetarianas"
     },
+
+    "titulo":
+    {
+        "TRD": "Sweet Recipes",
+        "TRS": "Salad Recipes",
+        "TNA": "Nutritional Articles"
+    },
+
+    "Subtitulos":
+    {
+        "TRDgf": "Gluten free sweet recipes",
+        "TRDsf": "Sugar free sweet recipes",
+        "TRDveg": "Vegetarian sweet recipes",
+        "TRDvege": "Vegan sweet recipes",
+        "TRSgf": "Gluten free salad recipes",
+        "TRSveg": "Vegetarian salad recipes",
+        "TRSvege": "Vegan salad recipes"
+    },
+
+    "Nosotros":
+    {
+        "Text1":"Due to the increasing number of people experiencing some type of dietary problem or issue, caused by disorders that develop over time, neglect, bodily deficiencies, or allergies, society needs to be more knowledgeable and better prepared to address the development of illnesses or conditions related to proper food intake. Therefore, InfoLive is a project developed by Web Development students at CTP La Tigra. Its purpose is to support the target population by generating high-quality nutritional content through a web service. This service will offer a wide range of options with verified information and recipes tailored to different needs, allowing for optimal adaptation to the needs of site visitors.",
+        "Objs": "Objectives",
+        "ObjTG": "General Objective",
+        "ObjG": "To present, through a responsive web platform, verified information on nutrition that promotes the development of habits and practices for a healthy physical and mental life, allowing for personalized support and guidance, during 2025.",
+        "ObjTE": "Specific Objectives",
+        "ObjE1": "Research objective: To collect relevant information about food, such as disorders, medical conditions, pathologies and based on this filter the most relevant recipes.",
+        "ObjE2": "Research objective: To collect relevant information about food, such as disorders, medical conditions, pathologies and based on this filter the most relevant recipes.",
+        "ObjE3": "Marketing objective: To promote the emergence of this new tool through various commercial media and social networks so that the target audience is aware of its existence and, through the influence of digital environments, to encourage its use.",
+        "Pobl": "Beneficiary population",
+        "Text2": "Men and women, aged 15 to 40, interested in a healthy eating style, or looking for recipes that suit their needs.",
+        "Intg":"Members"
+    },
+
 
     "footer": {
         "derechos": "derechos reservados &copy;2025."

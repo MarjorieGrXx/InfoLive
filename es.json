@@ -17,8 +17,38 @@
         "Op3.2": "Veganas",
         "Op3.3": "Vegetarianas"
     },
-    "titulo": {
-        "RecDulGF": "Recetas dulces gluten free"
+    "titulo":
+    {
+        "TRD": "Recetas dulces",
+        "TRS": "Recetas saladas",
+        "TNA": "Articulos nutricionales"
+    },
+
+    "Subtitulos":
+    {
+        "TRDgf": "Recetas dulces sin gluten",
+        "TRDsf": "Recetas dulces sin azucar",
+        "TRDveg": "Recetas dulces veganas",
+        "TRDvege": "Recetas dulces vegetarianas",
+        "TRSgf": "Recetas saladas sin gluten",
+        "TRSsf": "Recetas saladas sin azucar",
+        "TRSveg": "Recetas saladas veganas",
+        "TRSvege": "Recetas saladas vegetarianas"
+    },
+
+    "Nosotros":
+    {
+        "Text1":"Debido al incremento de la población que presenta algún tipo de inconveniente o situación con respecto a la alimentación, provocado por trastornos desarrollados en el tiempo, descuido, insuficiencias del organismo, alergias, se requiere de una sociedad que conozca más y este mejor preparada ante el desarrollo de enfermedades o condiciones a partir de una ingestión de alimentos acorde, por ello InfoLive es un proyecto desarrollado por estudiantes de la especialidad de Desarrollo Web del CTP La Tigra que tiene como finalidad apoyar a la población meta generando contenido de calidad en el ámbito alimenticio mediante un servicio web, el cual dispondrá de un gran apartado de opciones con información contrastada y recetas según diferentes necesidades que permitan acoplarse de la mejor manera para las personas que visiten el sitio.",
+        "Objs": "Objetivos",
+        "ObjTG": "Objetivo General",
+        "ObjG": "Exponer mediante una plataforma web responsiva, información sobre alimentación contrastada, que fomente el desarrollo de hábitos y prácticas para una vida física y mental sana, permitiendo recibir acompañamiento y apoyo personalizado, en el transcurso del 2025.",
+        "ObjTE": "Objetivos Específicos",
+        "ObjE1": "Objetivo de investigación: Recolectar la información relevante sobre la alimentación, como trastornos, condiciones médicas, patologías y en base a ello filtrar las recetas de mayor relevancia.",
+        "ObjE2": "Objetivo de desarrollo: Elaborar un sitio web donde se le presente al consumidor la información de manera más concisa, fácil y atractiva.",
+        "ObjE3": "Objetivo de comercialización: Promover mediante diversos medios comerciales y redes sociales el surgimiento de esta nueva herramienta de manera que el público meta conozca de su existencia y mediante la influencia de los entornos digitales impulsar su uso.",
+        "Pobl": "Población beneficiada",
+        "Text2": "Hombres y mujeres, entre un rango de 15 a 40 años, interesadas en un estilo de alimentación saludable, o en busca de recetas las cuales se adapten a sus necesidades",
+        "Intg":"Integrantes"
     },
 
     "footer": {

@@ -186,7 +186,7 @@ header,section, footer,article,aside,nav,figure {
   } 
 
   #text-us{
-    width: 340px;
+    width: 80%;
     height: auto;
     float: left;
     padding: 5px 25px;
@@ -198,7 +198,7 @@ header,section, footer,article,aside,nav,figure {
   } 
 
   #img-us{
-    width: 400px;
+    width: 250px;
     height: auto;
     float: left;
     margin: 20px; 
@@ -305,6 +305,16 @@ header,section, footer,article,aside,nav,figure {
   display: flex;
   }
 
+.buenas{
+  width: 90%;
+  height: auto;
+  float: left;
+  margin: 5px ;
+  padding: 10px;
+  line-height: 2;
+  text-align: center;
+  border-radius: 5px;
+}
 
 }
 
@@ -474,7 +484,7 @@ header,section, footer,article,aside,nav,figure {
   } 
 
   #text-us{
-    width: 340px;
+    width: 40%;
     height: auto;
     float: left;
     padding: 5px 25px;
@@ -592,6 +602,17 @@ header,section, footer,article,aside,nav,figure {
   #detalles-receta{
   display: flex;
   }
+
+  .buenas{
+  width: 90%;
+  height: auto;
+  float: left;
+  margin: 5px ;
+  padding: 10px;
+  line-height: 2;
+  text-align: center;
+  border-radius: 5px;
+}
 
 }
 
@@ -955,11 +976,11 @@ display: block;
 
 
 .buenas{
-  width: 95%;
+ /* width: 95%;
   height: auto;
   float: left;
   margin: 20px ;
-  padding: 10px 25px;
+  padding: 10px 25px;*/
   line-height: 2;
   text-align: center;
   border-radius: 5px;
