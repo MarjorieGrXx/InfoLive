@@ -21,6 +21,10 @@ header,section, footer,article,aside,nav,figure {
     display: none;
   }
 
+   .escritorio{
+    display: none;
+  }
+  
   .nav{
     background-color: #ff6600;
 
@@ -300,6 +304,7 @@ header,section, footer,article,aside,nav,figure {
   #detalles-receta{
   display: flex;
   }
+
 
 }
 
@@ -587,7 +592,6 @@ header,section, footer,article,aside,nav,figure {
   #detalles-receta{
   display: flex;
   }
-
 
 }
 

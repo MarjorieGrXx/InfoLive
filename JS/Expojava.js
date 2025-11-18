@@ -2,6 +2,7 @@ const grande = document.getElementById("grande")
 const photo = document.getElementById ("picture") 
 
 /*Para el cambio de idioma*/
+let idiomaActual = "es";
 const langButtons = document.querySelectorAll("[data-language]");
 const textsToChange = document.querySelectorAll("[data-section]");
 
@@ -9,11 +10,12 @@ const textsToChange = document.querySelectorAll("[data-section]");
 
 /******Para el cambio de idioma*******/
 
-let hizoClick = false;
+
 
 langButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        hizoClick = true;
+        idiomaActual = button.dataset.language;
+        cargarRecetas(idiomaActual);
         fetch(`../${button.dataset.language}.json`)
         .then(res => res.json())
         .then(data => {
@@ -30,31 +32,17 @@ langButtons.forEach((button) => {
 
 
 let recetas = [];
-if (!hizoClick) {
-
-    fetch("../esRecetas.json")
-        .then(respuesta => respuesta.json())
+function cargarRecetas(idioma) {
+    fetch(`../${idioma}Recetas.json`)
+        .then(r => r.json())
         .then(data => {
             recetas = data;
-            iniciarEventosDeImagenes(); 
+            iniciarEventosDeImagenes();
         });
-
-} else {
-
-    langButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-
-            fetch(`../${button.dataset.language}Recetas.json`) /*Buscamos el archivo json con el fetch el cual nos devuelve el contenido del archivo*/
-                .then(respuesta => respuesta.json()) /*Lo convertimpos a un objeto js*/
-                .then(data => {                     /*Usamos otro then para recibir esos datos y poder usarlos*/
-                    recetas = data;
-                    iniciarEventosDeImagenes(); 
-                });
-
-        });
-    });
-
 }
+
+// Cargar recetas al inicio con idioma por defecto
+cargarRecetas(idiomaActual);
 
 let tituloReceta = document.getElementById("tituloReceta")
 let textoReceta = document.getElementById("texto-receta")
