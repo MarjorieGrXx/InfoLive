@@ -26,7 +26,7 @@ header,section, footer,article,aside,nav,figure {
   }
   
   .nav{
-    background-color: #ff6600;
+    background: linear-gradient(to right, rgb(13, 109, 0), #fe7e11);
 
     --img1: scale(1);
     --img2: scale(0);
@@ -324,8 +324,7 @@ header,section, footer,article,aside,nav,figure {
   }
   
   .nav{
-    background-color: #ff6600;
-
+    background: linear-gradient(to right, rgb(13, 109, 0), #fe7e11);
     --img1: scale(1);
     --img2: scale(0);
   }
@@ -376,7 +375,7 @@ header,section, footer,article,aside,nav,figure {
 
   .dropdown{
       position: absolute;
-      background-color: rgb(13, 109, 0);;
+      background-color: rgb(13, 109, 0);
       width: 75%;
       max-width: 300px;
       right: 0;
